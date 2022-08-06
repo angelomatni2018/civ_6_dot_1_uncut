@@ -1,7 +1,7 @@
-- Install
+# Install
 copy ./build/Civ_6_dot_1_uncut to "~\Documents\My Games\Sid Meier's Civilization VI\Mods\Civ_6_dot_1_uncut"
 
-- Changelist
+# Changelist
 
 Science nerfs
 * Medieval and Renaissance techs are 1.1x cost
