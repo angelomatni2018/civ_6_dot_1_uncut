@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mod id="38712b98-9a3f-4e90-a271-c6bfba3e7afe" version="1">
+  <Properties>
+    <Name>civ_6_dot_1_uncut</Name>
+    <Description>This mod nerfs science, buffs everything else it can :) Sorry diplomacy, wish I could I help you :(</Description>
+    <Created>1659677208</Created>
+    <Teaser>This mod nerfs science, buffs everything else it can :) Sorry diplomacy, wish I could I help you :(</Teaser>
+    <Authors>Angelo Matni</Authors>
+    <SpecialThanks>Tom Roush</SpecialThanks>
+    <CompatibleVersions>1.2,2.0</CompatibleVersions>
+  </Properties>
+  <Dependencies>
+    <Mod id="4873eb62-8ccc-4574-b784-dda455e74e68" title="Expansion: Gathering Storm" />
+  </Dependencies>
+  <InGameActions>
+    <UpdateDatabase id="Gameplay">
+      <File>TheatreTourism.sql</File>
+    </UpdateDatabase>
+    <UpdateDatabase id="Gameplay">
+      <File>Wonders.sql</File>
+    </UpdateDatabase>
+    <UpdateDatabase id="Gameplay">
+      <File>Science.sql</File>
+    </UpdateDatabase>
+    <UpdateDatabase id="Gameplay">
+      <File>Units.sql</File>
+    </UpdateDatabase>
+  </InGameActions>
+  <Files>
+    <File>Science.sql</File>
+    <File>TheatreTourism.sql</File>
+    <File>Units.sql</File>
+    <File>Wonders.sql</File>
+  </Files>
+</Mod>
