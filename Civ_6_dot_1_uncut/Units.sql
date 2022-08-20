@@ -1,7 +1,12 @@
 -- Units
 
-UPDATE Units SET BaseMoves = 2 * (BaseMoves + 2) WHERE PurchaseYield = "YIELD_FAITH";
-UPDATE Units SET BaseMoves = 2 * (BaseMoves + 1) WHERE PurchaseYield != "YIELD_FAITH";
+UPDATE Units SET BaseMoves = 2 * (BaseMoves + 2)
+WHERE PurchaseYield = "YIELD_FAITH";
+UPDATE Units SET BaseMoves = 2 * (BaseMoves + 1)
+WHERE PurchaseYield != "YIELD_FAITH";
+
+UPDATE GlobalParameters SET Value=6
+WHERE Name="MOVEMENT_WHILE_EMBARKED_BASE";
 
 UPDATE Units SET CostProgressionParam1=6
 WHERE UnitType="UNIT_APOSTLE" ;
@@ -136,3 +141,19 @@ VALUES ("FEATURE_JUNGLE", "TERRAIN_DESERT")
 INSERT INTO Feature_ValidTerrains
 (FeatureType, TerrainType)
 VALUES ("FEATURE_JUNGLE", "TERRAIN_DESERT_HILLS")
+
+INSERT INTO Improvement_ValidTerrains
+(ImprovementType, TerrainTYpe, PrereqTech, PrereqCivic)
+VALUES ("IMPROVEMENT_FARM", "TERRAIN_DESERT", NULL, NULL);
+INSERT INTO Improvement_ValidTerrains
+(ImprovementType, TerrainTYpe, PrereqTech, PrereqCivic)
+VALUES ("IMPROVEMENT_FARM", "TERRAIN_TUNDRA", NULL, NULL);
+INSERT INTO Improvement_ValidTerrains
+(ImprovementType, TerrainTYpe, PrereqTech, PrereqCivic)
+VALUES ("IMPROVEMENT_FARM", "TERRAIN_DESERT_HILLS", NULL, "CIVIC_CIVIL_ENGINEERING");
+INSERT INTO Improvement_ValidTerrains
+(ImprovementType, TerrainTYpe, PrereqTech, PrereqCivic)
+VALUES ("IMPROVEMENT_FARM", "TERRAIN_TUNDRA_HILLS", NULL, "CIVIC_CIVIL_ENGINEERING");
+
+UPDATE GlobalParameters SET Value=50
+WHERE Name="LEVY_MILITARY_PERCENT_OF_UNIT_PURCHASE_COST";
